@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/container.css">
+    <script src="script/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <title>Sistema de orçamento</title>
+</head>
+
+<body>
+    <header>
+        <img src="imagens/Logo.png" alt="X-Pizzaria" id="logo">
+
+        <div id="menu">
+
+            <a class="botaoMenu" href="index.html">Home</a>
+            <a class="botaoMenu" href="estimate.html">Estimate</a>
+            <a class="botaoMenu" href="request.html">Request</a>
+            <a class="botaoMenu" href="#">Contact</a>
+            <a class="botaoMenu" href="#">About</a>
+
+        </div>
+
+
+    </header>
+
+
+    <div id="container">
+        <div id="formulario">
+            <form>
+                <div id="selectTamanho">
+                    <fieldset>
+                        <legend>Tamanhos</legend>
+                        <select id="tamanho" required>
+<!--                             <option value="" data-default disabled selected></option> -->
+                            <option id="Gigante" value="30" >Gigante</option>
+                            <option id="Familia" value="25" >Familia</option>
+                            <option id="Grande" value="20" >Grande</option>
+                            <option id="Media" value="15" >Media</option>
+                            <option id="Pequena" value="10" >Pequena</option>
+                            <option id="Brotinho" value="5" >Brotinho</option>
+                        </select>
+
+                    </fieldset>
+                </div>
+
+                <fieldset>
+                    <legend>Sabores</legend>
+                    <div id="selectSabor" for="sabor">
+
+                        <div>
+                            <label for="Mucarela" title="Apenas molho, muçarela e oregano">Mussarela</label>
+                            <input type="checkbox" id="Mucarela" value="6" class="sabor" checked>
+                        </div>
+
+                        <div >
+                            <label for="Calabresa"
+                                title="Molho, muçarela, calabresa, cebola e oregano">Calabresa</label>
+                            <input type="checkbox" id="Calabresa" value="8" class="sabor">
+                        </div>
+
+                        <div >
+                            <label for="Portuguesa"
+                                title="Molho, presunto, ovos, muçarela, ervilha e oregano">Portuguesa</label>
+                            <input type="checkbox" id="Portuguesa" value="10" class="sabor">
+                        </div>
+
+                        <div >
+                            <label for="Atum" title="Molho, atum sólido, cebola e oregano">Atum</label>
+                            <input type="checkbox" id="Atum" value="10" class="sabor">
+                        </div>
+
+                        <div >
+                            <label for="Baiana"
+                                title="Molho, calabresa moída, ovos, pimenta, cebola, um toque de parmesão e oregano">Baiana</label>
+                            <input type="checkbox" id="Baiana" value="10" class="sabor">
+                        </div>
+
+                        <div>
+                            <label for="Brócolis"
+                                title="Molho, brócolis, bacon crocante, muçarela, catupiry e oregano">Brócolis</label>
+                            <input type="checkbox" id="Brócolis" value="12" class="sabor">
+                        </div>
+
+                        <div>
+                            <label for="Caipira">Caipira</label>
+                            <input type="checkbox" id="Caipira" value="12" class="sabor">
+                        </div>
+
+                        <div>
+                            <label for="FrangoCatupiry">Frango Catupiry</label>
+                            <input type="checkbox" id="Frango com catupiry" value="12" class="sabor">
+                        </div>
+
+                        <div>
+                            <label for="Mista">Mista</label>
+                            <input type="checkbox" id="Mista" value="12" class="sabor">
+                        </div>
+                    </div>
+                </fieldset>
+                <legend>Borda</legend>
+                <fieldset>
+                    <div id="selectBorda">
+                        <label for="borda">Sim</label>
+                        <input type="radio" name="borda" id="s" value="Sim" class="borda">
+                        <label for="borda">Não</label>
+                        <input type="radio" name="borda" id="n" value="Não" class="borda" checked>
+                    </div>
+                </fieldset>
+
+                <legend>Sabor da borda</legend>
+                <fieldset>
+                    <div id="selectSaboresDaBorda">
+                        <label for="saborBorda">Catupiry</label>
+                        <input type="radio" name="saborBorda" value=5 id="Catupiry" class="saborBorda" checked>
+
+                        <label for="saborBorda">Cheddar</label>
+                        <input type="radio" name="saborBorda" value=5 id="Cheddar" class="saborBorda">
+
+                        <label for="saborBorda">Requeijão</label>
+                        <input type="radio" name="saborBorda" value=3 id="Requeijão" class="saborBorda">
+
+                        <label for="saborBorda">Muçarela</label>
+                        <input type="radio" name="saborBorda" value=8 id="Muçarela" class="saborBorda">
+                    </div>
+                </fieldset>
+
+
+            </form>
+            <button  onclick="calcular()">Concluir</button>
+        </div>
+
+        
+    </div>
+    
+
+</body>
+
+</html>

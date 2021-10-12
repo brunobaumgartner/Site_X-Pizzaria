@@ -1,0 +1,42 @@
+button {
+    margin       : 15px;
+    width        : 90px;
+    height       : 27px;
+    border-radius: 25px;
+    border       : solid 2px black;
+}
+
+button:hover {
+    border    : solid 2px rgb(248, 240, 0, 50);
+    transition: 300ms;
+}
+
+#container {
+
+    background-image   : url(../imagens/pizza-gead1b8489_1280.jpg);
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: 0 80%;
+
+    height: 100%;
+    width : 100%;
+
+}
+
+#formulario{
+    margin-top: 120px;
+}
+
+#inputAddress {
+    border       : solid black 2px;
+    border-radius: 25px;
+    padding      : 5px;
+    width        : 555px;
+}
+
+#inputName, #inputPhone{
+    border       : solid black 2px;
+    border-radius: 25px;
+    padding      : 5px;
+    width        : 150px;
+}

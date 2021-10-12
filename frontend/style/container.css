@@ -1,0 +1,83 @@
+/*  -------------   FORM --------------- */
+
+
+#container {
+
+    background-image   : url(../imagens/pizza-gead1b8489_1280.jpg);
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: 0 80%;
+
+    height         : 625px;
+    width          : 100%;
+    overflow       : hidden;
+    background-clip: padding-box;
+
+}
+
+#formulario {
+
+    width      : 700px;
+    margin-left: auto;
+    margin-top : 100px;
+
+}
+
+
+
+label,
+legend {
+    color    : white;
+    font-size: 20px;
+}
+
+legend {
+    padding-top: 10px;
+}
+
+#selectSabor {
+    display              : grid;
+    grid-template-columns: auto auto;
+
+    border       : solid black 2px;
+    border-radius: 25px;
+    padding      : 10px;
+    width        : 555px;
+}
+
+#selectSaboresDaBorda,
+#selectBorda{
+    border       : solid black 2px;
+    border-radius: 25px;
+    padding      : 5px;
+    width        : 555px;
+
+}
+
+
+#observacao {
+    resize       : none;
+    border-radius: 10px;
+    border       : solid black 2px;
+
+}
+
+button {
+    margin-top      : 20px;
+    width           : 80px;
+    height          : 30px;
+    background-color: white;
+    border          : solid black 2px;
+    border-radius   : 25px;
+}
+
+select {
+    width        : 200px;
+    border       : solid black 2px;
+    border-radius: 25px;
+}
+
+span {
+    color    : white;
+    font-size: 20px;
+}
