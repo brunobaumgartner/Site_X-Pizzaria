@@ -19,20 +19,18 @@ module.exports = {
         })
     
         this.transporter.sendMail({
-            text: ` Nome: ${nomeCli}
-                    Telefone: ${foneCli}
-                    Endereço: ${enderecoCli}
-                    Tamanho: ${tamanho}
-                    Sabor: ${saborPizza}
-                    Sabor da Borda: ${saborBorda}
-                    Observação: ${observacao}`,
+            text: `
+                Nome: ${nomeCli}
+                Telefone: ${foneCli}
+                Endereço: ${enderecoCli}
+                Tamanho: ${tamanho}
+                Sabor: ${saborPizza}
+                Sabor da Borda: ${saborBorda}
+                Observação: ${observacao}
+                `,
             subject: 'Assunto do e-mail',
-            from: "X-Pizzaria <>",
-            to: ''
-        }).then(info=>{
-            res.send(info)
-        }).catch(error=>{
-            res.send(error)
+            from: "X-Pizzaria <brunobaumgartner@hotmail.com>",
+            to: 'brunobaumgartner@hotmail.com'
         })
     }
 }

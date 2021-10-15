@@ -1,3 +1,4 @@
+
 function sendRequest() {
     var valorSabores = 0
     var quantSabores = 0
@@ -48,10 +49,6 @@ function sendRequest() {
 
 
 
-
-    console.log(nomeCli, foneCli, enderecoCli, tamanho, saborPizza, saborBorda, observacao)
-
-
     let request = { nomeCli, foneCli, enderecoCli, tamanho, saborPizza, saborBorda, observacao }
 
     const options = {
@@ -60,7 +57,5 @@ function sendRequest() {
         body: JSON.stringify(request)
     }
 
-    fetch("http://localhost:5000/api/request", options).then(res => {
-        console.log(res)
-    })
+    fetch("http://localhost:5000/api/request", options)
 }
