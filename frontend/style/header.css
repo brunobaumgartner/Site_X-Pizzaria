@@ -8,6 +8,10 @@
 
 body {
     height: 100%;
+    background-image   : linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../imagens/pizza-gead1b8489_1280.jpg);
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: 0 80%;
 }
 
 

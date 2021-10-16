@@ -13,10 +13,6 @@ button:hover {
 
 #container {
 
-    background-image   : url(../imagens/pizza-gead1b8489_1280.jpg);
-    background-repeat  : no-repeat;
-    background-size    : cover;
-    background-position: 0 80%;
 
     height: 100%;
     width : 100%;
