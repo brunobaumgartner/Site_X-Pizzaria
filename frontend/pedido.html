@@ -13,16 +13,24 @@
 
 <body id="body">
     <header>
+
+
+
         <img src="imagens/Logo.png" alt="X-Pizzaria" id="logo">
 
-        <div id="menu">
 
-            <a class="botaoMenu" href="index.html">Inicio</a>
-            <a class="botaoMenu" href="estimate.html">Orçamento</a>
-            <a class="botaoMenu" href="pedido.html">Pedido</a>
-            <a class="botaoMenu" href="galeria.html">Galeria</a>
 
-        </div>
+            <input type="checkbox" id="bt_menu">
+            <label for="bt_menu">&#9776;</label>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="estimate.html">Orçamento</a></li>
+                    <li><a href="pedido.html">Pedido</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                </ul>
+            </div>
+
 
 
     </header>
@@ -33,26 +41,26 @@
         <div id="formulario">
             <form>
 
-                <div>
-                    <fieldset id="name" style="display: inline;">
+                <div style="width: 80%;">
+                    <fieldset id="name">
                         <span>Nome</span>
-                        <input id="inputName" type="text" pattern="^[A-Z]{1}[a-z]{2,9}$" placeholder="Ex: Ana" title="O nome tem que ter a primeira letra maiuscula e no minimo 3 letras" style="margin-right: 20px;" required>
+                        <input id="inputName" type="text" pattern="^[A-Z]{1}[a-z]{2,9}$" placeholder="Ex: Ana" title="O nome tem que ter a primeira letra maiuscula e no minimo 3 letras" required>
                         <span>Whatsapp</span>
                         <input id="inputPhone" type="tel" pattern="^[0-9]{2}[9][0-9]{4}[0-9]{4}$" placeholder="Ex: 21964772849" title="Apenas os numeros, sem parenteses e sem traços. Apenas com o ddd e o 9" required>
                     </fieldset>
                 </div>
-                <div>
+                <div style="width: 80%;">
                     <fieldset>
-                        <legend>Endereço</legend>
+                        <span>Endereço</span>
                         <input id="inputAddress" type="text" required>
                     </fieldset>
 
 
                 </div>
 
-                <div id="selectTamanho">
+                <div id="selectTamanho" style="width: 80%;">
                     <fieldset>
-                        <legend>Tamanhos</legend>
+                        <span>Tamanhos</span>
                         <select id="tamanho" required>
                             <option id="Gigante" value="30">Gigante</option>
                             <option id="Familia" value="25">Familia</option>
@@ -66,7 +74,7 @@
                 </div>
 
                 <fieldset>
-                    <legend>Sabores</legend>
+                    <span>Sabores</span>
                     <div id="selectSabor" for="sabor">
 
                         <div>
@@ -100,23 +108,23 @@
                         </div>
 
                         <div>
-                            <label for="Caipira">Caipira</label>
+                            <label for="Caipira" title="Queijo mussarela, frango, tomate cereja, calabresa, cebola, milho, pimentão e bacon">Caipira</label>
                             <input type="checkbox" id="Caipira" value="12" class="sabor">
                         </div>
 
                         <div>
-                            <label for="FrangoCatupiry">Frango Catupiry</label>
+                            <label for="FrangoCatupiry" title="Filé de frango desfiado com cobertura de requeijão">Frango Catupiry</label>
                             <input type="checkbox" id="Frango com catupiry" value="12" class="sabor">
                         </div>
 
                         <div>
-                            <label for="Mista">Mista</label>
+                            <label for="Mista" title="Molho de tomate, mussarela, calabresa fatiada, lombo candadense fatiado e provolone ralado">Mista</label>
                             <input type="checkbox" id="Mista" value="12" class="sabor">
                         </div>
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>Borda</legend>
+                    <span>Borda</span>
                     <div id="selectBorda">
                         <label for="borda">Sim</label>
                         <input type="radio" name="borda" id="s" value="Sim" class="borda">
@@ -125,8 +133,8 @@
                     </div>
                 </fieldset>
 
-                <legend>Sabor da borda</legend>
                 <fieldset>
+                    <span>Sabor da borda</span>
                     <div id="selectSaboresDaBorda">
                         <label for="saborBorda">Catupiry</label>
                         <input type="radio" name="saborBorda" value=5 id="Catupiry" class="saborBorda" checked>
@@ -143,12 +151,12 @@
                 </fieldset>
                 <div id="taObservacao">
                     <fieldset>
-                        <legend>Observação</legend>
+                        <span>Observação</span>
                         <textarea name="observacao" id="observacao" cols="80" rows="5" value="">    </textarea>
                     </fieldset>
                 </div>
 
-                <button onclick="sendRequest()">Send</button>
+                <button onclick="sendRequest()">Enviar</button>
             </form>
         </div>
 

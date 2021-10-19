@@ -19,21 +19,19 @@
     
     #formulario {
         width: 70%;
-        height: 70%;
+    /* height: 100%; */
         margin: 0 auto;
-        margin-top: 109px;
-        margin-bottom: 5vh;
+        margin-top: 136px;
+        margin-bottom: 6vh;
     }
     
     label,
-    legend {
+    span {
         color: white;
-        font-size: 20px;
+        font-size: 30px;
     }
     
-    legend {
-        padding-top: 10px;
-    }
+
     
     #selectSabor {
         display: grid;
@@ -53,6 +51,7 @@
     }
     
     #observacao {
+        display: flex;
         resize: none;
         border-radius: 10px;
         border: solid black 2px;
@@ -73,10 +72,6 @@
         border-radius: 25px;
     }
     
-    span {
-        color: white;
-        font-size: 20px;
-    }
     
     #contato {
         margin-top: 120px;
@@ -167,12 +162,19 @@
         justify-items: center;
         align-items: center;
         margin: 10px;
-        margin-top: 130px;
+        margin-top: 144px;
+    }
+
+    #galeria img, #convite img{
+        transition: all 0.5s;
+    }
+    #convite img:hover, #galeria img:hover {
+        transform: scale(1.2);
     }
     
-    @media (max-width: 1080px) {
+    @media (max-width: 1320px) {
         #body {
-            height: 100vh;
+            height: 100%;
         }
         img {
             width: 540px;
@@ -210,9 +212,10 @@
         }
         #formulario {
             width: 70%;
-            height: 85vh;
+            height: 70%;
             margin: 0 auto;
             margin-top: 109px;
+            margin-bottom: 5vh;
         }
         footer {
             height: 15%;
@@ -229,7 +232,7 @@
             justify-items: center;
             align-items: center;
             margin: 10px;
-            margin-top: 130px;
+            margin-top: 290px;
         }
         .imgGaleria {
             border: 2px solid black;

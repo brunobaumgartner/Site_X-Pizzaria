@@ -49,6 +49,10 @@ function sendRequest() {
 
 
 
+
+
+
+
     let request = { nomeCli, foneCli, enderecoCli, tamanho, saborPizza, saborBorda, observacao }
 
     const options = {
@@ -58,4 +62,14 @@ function sendRequest() {
     }
 
     fetch("http://192.168.0.102:5000/api/request", options)
+
+    resposta()
+}
+
+function resposta(){
+    let resultado = `  
+            <div style="margin-top:130px; height: 395px; color:white;">
+                <h1>Pedido enviada</h1>
+            </div>`
+    document.getElementById("formulario").innerHTML = resultado
 }

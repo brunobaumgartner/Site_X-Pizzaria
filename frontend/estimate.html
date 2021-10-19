@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/container.css">
+    <link rel="stylesheet" href="style/estimate.css">
     <script src="script/scriptEstimate.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
     <title>Sistema de orçamento</title>
@@ -19,16 +20,24 @@
 
 <body id="body">
     <header>
+
+
+
         <img src="imagens/Logo.png" alt="X-Pizzaria" id="logo">
 
-        <div id="menu">
 
-            <a class="botaoMenu" href="index.html">Inicio</a>
-            <a class="botaoMenu" href="estimate.html">Orçamento</a>
-            <a class="botaoMenu" href="pedido.html">Pedido</a>
-            <a class="botaoMenu" href="galeria.html">Galeria</a>
 
-        </div>
+            <input type="checkbox" id="bt_menu">
+            <label for="bt_menu">&#9776;</label>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="estimate.html">Orçamento</a></li>
+                    <li><a href="pedido.html">Pedido</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                </ul>
+            </div>
+
 
 
     </header>
@@ -37,9 +46,9 @@
     <div id="container">
         <div id="formulario">
             <form>
-                <div id="selectTamanho">
+                <div id="selectTamanho" style="width: 80%;">
                     <fieldset>
-                        <legend>Tamanhos</legend>
+                        <span>Tamanhos</span>
                         <select id="tamanho" required>
                             <option id="Gigante" value="30">Gigante</option>
                             <option id="Familia" value="25">Familia</option>
@@ -53,7 +62,7 @@
                 </div>
 
                 <fieldset>
-                    <legend>Sabores</legend>
+                    <span>Sabores</span>
                     <div id="selectSabor" for="sabor">
 
                         <div>
@@ -87,23 +96,23 @@
                         </div>
 
                         <div>
-                            <label for="Caipira">Caipira</label>
+                            <label for="Caipira" title="Queijo mussarela, frango, tomate cereja, calabresa, cebola, milho, pimentão e bacon">Caipira</label>
                             <input type="checkbox" id="Caipira" value="12" class="sabor">
                         </div>
 
                         <div>
-                            <label for="FrangoCatupiry">Frango Catupiry</label>
+                            <label for="FrangoCatupiry" title="Filé de frango desfiado com cobertura de requeijão">Frango Catupiry</label>
                             <input type="checkbox" id="Frango com catupiry" value="12" class="sabor">
                         </div>
 
                         <div>
-                            <label for="Mista">Mista</label>
+                            <label for="Mista" title="Molho de tomate, mussarela, calabresa fatiada, lombo candadense fatiado e provolone ralado">Mista</label>
                             <input type="checkbox" id="Mista" value="12" class="sabor">
                         </div>
                     </div>
                 </fieldset>
-                <legend>Borda</legend>
                 <fieldset>
+                    <span>Borda</span>
                     <div id="selectBorda">
                         <label for="borda">Sim</label>
                         <input type="radio" name="borda" id="s" value="Sim" class="borda">
@@ -112,8 +121,8 @@
                     </div>
                 </fieldset>
 
-                <legend>Sabor da borda</legend>
                 <fieldset>
+                    <span>Sabor da borda</span>
                     <div id="selectSaboresDaBorda">
                         <label for="saborBorda">Catupiry</label>
                         <input type="radio" name="saborBorda" value=5 id="Catupiry" class="saborBorda" checked>
@@ -129,7 +138,7 @@
                     </div>
                 </fieldset>
 
-                <button onclick="sendEstimate()">Calcular</button>
+                <button type="button" onclick="sendEstimate()">Calcular</button>
             </form>
         </div>
 
