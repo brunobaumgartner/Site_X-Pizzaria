@@ -12,13 +12,15 @@ function calcTotal(){
 }
 
 
+//resultado do orçamento
+
 function viewEstimate(){
-    fetch("http://localhost:5000/api/getEstimate").then(res=>{
+    fetch("http://192.168.0.102:5000/api/getEstimate").then(res=>{
         return res.json()
     }).then(json=>{
         let estimates = JSON.parse(json);
         let resultado = `  
-            <div style="margin-top:150px">
+            <div style="margin-top:130px; height: 395px;">
                 <p style="color:white">Tamanho: --------- ${estimates.tamanho}</p>
                 <p style="color:white">Sabor: ----------- ${estimates.saborPizza}</p>
                 <p style="color:white">Borda: ----------- ${estimates.saborBorda}</p>
@@ -77,7 +79,7 @@ function sendEstimate() {
             body: JSON.stringify(estimate)
         }
         
-        fetch("http://localhost:5000/api/estimate", options)
+        fetch("http://192.168.0.102:5000/api/estimate", options)
 
     
     viewEstimate()

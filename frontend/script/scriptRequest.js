@@ -57,5 +57,5 @@ function sendRequest() {
         body: JSON.stringify(request)
     }
 
-    fetch("http://localhost:5000/api/request", options)
+    fetch("http://192.168.0.102:5000/api/request", options)
 }

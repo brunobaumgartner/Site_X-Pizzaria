@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/container.css">
+    <link rel="stylesheet" href="style/request.css">
+    <script src="script/scriptRequest.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <title>Sistema de orçamento</title>
+</head>
+
+<body id="body">
+    <header>
+        <img src="imagens/Logo.png" alt="X-Pizzaria" id="logo">
+
+        <div id="menu">
+
+            <a class="botaoMenu" href="index.html">Inicio</a>
+            <a class="botaoMenu" href="estimate.html">Orçamento</a>
+            <a class="botaoMenu" href="pedido.html">Pedido</a>
+            <a class="botaoMenu" href="galeria.html">Galeria</a>
+
+        </div>
+
+
+    </header>
+
+
+    <div id="container">
+
+        <div id="formulario">
+            <form>
+
+                <div>
+                    <fieldset id="name" style="display: inline;">
+                        <span>Nome</span>
+                        <input id="inputName" type="text" pattern="^[A-Z]{1}[a-z]{2,9}$" placeholder="Ex: Ana" title="O nome tem que ter a primeira letra maiuscula e no minimo 3 letras" style="margin-right: 20px;" required>
+                        <span>Whatsapp</span>
+                        <input id="inputPhone" type="tel" pattern="^[0-9]{2}[9][0-9]{4}[0-9]{4}$" placeholder="Ex: 21964772849" title="Apenas os numeros, sem parenteses e sem traços. Apenas com o ddd e o 9" required>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Endereço</legend>
+                        <input id="inputAddress" type="text" required>
+                    </fieldset>
+
+
+                </div>
+
+                <div id="selectTamanho">
+                    <fieldset>
+                        <legend>Tamanhos</legend>
+                        <select id="tamanho" required>
+                            <option id="Gigante" value="30">Gigante</option>
+                            <option id="Familia" value="25">Familia</option>
+                            <option id="Grande" value="20">Grande</option>
+                            <option id="Media" value="15">Media</option>
+                            <option id="Pequena" value="10">Pequena</option>
+                            <option id="Brotinho" value="5">Brotinho</option>
+                        </select>
+
+                    </fieldset>
+                </div>
+
+                <fieldset>
+                    <legend>Sabores</legend>
+                    <div id="selectSabor" for="sabor">
+
+                        <div>
+                            <label for="Mucarela" title="Apenas molho, muçarela e oregano">Mussarela</label>
+                            <input type="checkbox" id="Mucarela" value="6" class="sabor" checked>
+                        </div>
+
+                        <div>
+                            <label for="Calabresa" title="Molho, muçarela, calabresa, cebola e oregano">Calabresa</label>
+                            <input type="checkbox" id="Calabresa" value="8" class="sabor">
+                        </div>
+
+                        <div>
+                            <label for="Portuguesa" title="Molho, presunto, ovos, muçarela, ervilha e oregano">Portuguesa</label>
+                            <input type="checkbox" id="Portuguesa" value="10" class="sabor">
+                        </div>
+
+                        <div>
+                            <label for="Atum" title="Molho, atum sólido, cebola e oregano">Atum</label>
+                            <input type="checkbox" id="Atum" value="10" class="sabor">
+                        </div>
+
+                        <div>
+                            <label for="Baiana" title="Molho, calabresa moída, ovos, pimenta, cebola, um toque de parmesão e oregano">Baiana</label>
+                            <input type="checkbox" id="Baiana" value="10" class="sabor">
+                        </div>
+
+                        <div>
+                            <label for="Brócolis" title="Molho, brócolis, bacon crocante, muçarela, catupiry e oregano">Brócolis</label>
+                            <input type="checkbox" id="Brócolis" value="12" class="sabor">
+                        </div>
+
+                        <div>
+                            <label for="Caipira">Caipira</label>
+                            <input type="checkbox" id="Caipira" value="12" class="sabor">
+                        </div>
+
+                        <div>
+                            <label for="FrangoCatupiry">Frango Catupiry</label>
+                            <input type="checkbox" id="Frango com catupiry" value="12" class="sabor">
+                        </div>
+
+                        <div>
+                            <label for="Mista">Mista</label>
+                            <input type="checkbox" id="Mista" value="12" class="sabor">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Borda</legend>
+                    <div id="selectBorda">
+                        <label for="borda">Sim</label>
+                        <input type="radio" name="borda" id="s" value="Sim" class="borda">
+                        <label for="borda">Não</label>
+                        <input type="radio" name="borda" id="n" value="Não" class="borda" checked>
+                    </div>
+                </fieldset>
+
+                <legend>Sabor da borda</legend>
+                <fieldset>
+                    <div id="selectSaboresDaBorda">
+                        <label for="saborBorda">Catupiry</label>
+                        <input type="radio" name="saborBorda" value=5 id="Catupiry" class="saborBorda" checked>
+
+                        <label for="saborBorda">Cheddar</label>
+                        <input type="radio" name="saborBorda" value=5 id="Cheddar" class="saborBorda">
+
+                        <label for="saborBorda">Requeijão</label>
+                        <input type="radio" name="saborBorda" value=3 id="Requeijão" class="saborBorda">
+
+                        <label for="saborBorda">Muçarela</label>
+                        <input type="radio" name="saborBorda" value=8 id="Muçarela" class="saborBorda">
+                    </div>
+                </fieldset>
+                <div id="taObservacao">
+                    <fieldset>
+                        <legend>Observação</legend>
+                        <textarea name="observacao" id="observacao" cols="80" rows="5" value="">    </textarea>
+                    </fieldset>
+                </div>
+
+                <button onclick="sendRequest()">Send</button>
+            </form>
+        </div>
+
+        <footer>
+            <a href="https://api.whatsapp.com/send?phone=5521964772849&text=Texto%20Aleat%C3%B3rio" style="border: none; transition: none;">(21)96477-2849</a>
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>
